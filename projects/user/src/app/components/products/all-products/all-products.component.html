@@ -1,0 +1,35 @@
+<div class="container mb-5">
+  <div class="row g-3 row-gap-4">
+    <div class="col-6 col-md-4 col-xl-3" *ngFor="let product of products">
+      <div class="product-card">
+        <div
+          class="position-relative img-parent img-thumbnail rounded-4 curser-pointer"
+          [routerLink]="['/details', product.id]"
+        >
+          <img [src]="product.image" alt="" />
+          <span class="in-stock xs-small">
+            <i class="fa fa-dot-circle"></i> In Stock
+          </span>
+        </div>
+        <div class="product-details mt-2 p-2">
+          <div>
+            <h4 class="fs-6 text-muted">{{ product.category }}</h4>
+            <h2 class="fs-5 fw-bolder">
+              {{ product.title.split(" ").slice(0, 5).join(" ") }}
+            </h2>
+          </div>
+          <div>
+            <span class="price">{{ product.price }}EGP</span>
+            <span class="xs-small ps-2 fw-bold text-warning">
+              <i class="fa fa-star"></i>
+              {{ product.rating.rate }}
+            </span>
+            <span class="xs-small text-muted ps-1 fw-bold">
+              ({{ product.rating.count }})
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

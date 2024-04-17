@@ -1,0 +1,105 @@
+<section class="my-5">
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      <div class="col-md-5">
+        <div class="p-5 product-images border rounded-5">
+          <img
+            [src]="product.image"
+            [alt]="product.title"
+            class="w-75 main-image"
+          />
+          <div class="row g-2 slider border-top">
+            <div class="col-3">
+              <div class="img-wrapper">
+                <img
+                  [src]="product.image"
+                  [alt]="product.title"
+                  class="w-100 img-thumbnail rounded-4 p-3 curser-pointer"
+                />
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img-wrapper">
+                <img
+                  [src]="product.image"
+                  [alt]="product.title"
+                  class="w-100 img-thumbnail rounded-4 p-3 curser-pointer"
+                />
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img-wrapper">
+                <img
+                  [src]="product.image"
+                  [alt]="product.title"
+                  class="w-100 img-thumbnail rounded-4 p-3 curser-pointer"
+                />
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="img-wrapper">
+                <img
+                  [src]="product.image"
+                  [alt]="product.title"
+                  class="w-100 img-thumbnail rounded-4 p-3 curser-pointer"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div>
+          <h1 class="h4 fw-bolder">
+            {{ product.title }}
+          </h1>
+          <span class="d-block xs-small fw-bold text-black-50"
+            >ExpertLabo
+          </span>
+          <div class="py-4 details">
+            <h2 class="fw-bolder">{{ product.price }}.00 EGP</h2>
+            <div class="ps-3 xs-small">
+              <span class="rating">
+                <i class="fa-regular fa-star"></i> {{ product.rating.rate }}
+              </span>
+              <span class="rating-count">
+                <i class="fa-regular fa-message"></i>
+                {{ product.rating.count }} Reviews
+              </span>
+            </div>
+          </div>
+          <div class="cart-options">
+            <div class="my-counter">
+              <button><i class="fa fa-minus"></i></button>
+              <div class="count"><span>1</span></div>
+              <button><i class="fa fa-plus"></i></button>
+            </div>
+            <button
+              class="btn add-to-cart xs-small text-white bg-main rounded-pill"
+            >
+              <i class="fa fa-shopping-cart"></i> Add To Cart
+            </button>
+            <button
+              class="btn buy-now xs-small text-white bg-black rounded-pill"
+            >
+              <i class="fa fa-shopping-cart"></i> Buy NOW
+            </button>
+          </div>
+          <div class="p-3 border rounded-4 d-flex">
+            <i class="fa fa-shopping-bag"></i>
+            <div class="ps-3">
+              <p class="xs-small fw-bold mb-1">Return Delivery</p>
+              <p class="xs-small text-black-50 m-0">
+                Free 30 days Delivery Return. Details
+              </p>
+            </div>
+          </div>
+          <div>
+            <h4 class="fw-bolder mt-3">More about this product</h4>
+            <p class="lead fs-6 ps-2">{{ product.description }}...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
